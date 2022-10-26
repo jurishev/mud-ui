@@ -84,9 +84,11 @@ div.console div.controls button {
   justify-content: center;
 }
 
-div.console div.controls button:hover {
-  background-color: rgb(72, 72, 72);
-  color: gainsboro;
+@media (hover: hover) and (pointer: fine) {
+  div.console div.controls button:hover {
+    background-color: rgb(72, 72, 72);
+    color: gainsboro;
+  }
 }
 
 div.console div.controls button:active {
