@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: 'Fira Code';
+}
+
+div.console {
+  height: 100%;
+  display: grid;
+  gap: 0;
+  grid-template-columns: 4rem 1fr 4rem;
+  background-color: rgb(48, 48, 48);
+}
+
+div.console div.room {
+  padding: 1rem;
+  color: gainsboro;
+  background-color: black;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  overflow-y: auto;
+}
+
+div.console div.room p {
+  max-width: 80ch;
+  margin: 0.3rem 0;
+}
+
+div.console div.room p:first-child {
+  margin-block-start: 0;
+}
+
+div.console div.room p:last-child {
+  margin-block-end: 0;
+}
+
+div.console div.room p.title {
+  color: whitesmoke;
+}
+
+div.console div.room p.look {
+  color: rgb(133, 133, 120);
+}
+
+div.console div.room p.exits {
+  color: whitesmoke;
+}
+
+div.console div.room p.item {
+  color: rgb(207, 207, 33);
+}
+
+div.console div.room p.hero {
+  color: rgb(207, 34, 207);
+}
+
+div.console div.controls {
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0;
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+div.console div.controls button {
+  background-color: transparent;
+  margin: auto;
+  color: dimgray;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.console div.controls div.buttons {
+  align-self: center;
+}
+
+div.console div.controls div.buttons > button {
+  margin: 0.5rem auto;
+  border: 2px solid rgb(75, 75, 75);
+}
+
+div.console div.controls div.buttons > button:first-child {
+  margin-top: 0;
+}
+
+div.console div.controls div.buttons > button:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (orientation: portrait) {
+  div.console {
+    grid-template-columns: auto;
+    grid-template-rows: 4rem 1fr 4rem;
+  }
+
+  div.console div.room {
+    margin: 0 0.5rem;
+  }
+
+  div.console div.controls {
+    padding: 0 0.5rem;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: max-content 1fr max-content;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  div.console div.controls button {
+    margin: auto;
+  }
+
+  div.console div.controls div.buttons {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  div.console div.controls div.buttons > button {
+    display: inline-block;
+    margin: 0;
+  }
+
+  div.console div.controls div.buttons > button:first-child {
+    margin-left: 0;
+  }
+
+  div.console div.controls div.buttons > button:last-child {
+    margin-right: 0;
+  }
+}
