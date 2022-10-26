@@ -84,10 +84,28 @@ div.console div.controls button {
   justify-content: center;
 }
 
+div.console div.controls button.active {
+  background-color: rgb(72, 72, 72);
+  color: gainsboro;
+}
+
 @media (hover: hover) and (pointer: fine) {
   div.console div.controls button:hover {
     background-color: rgb(72, 72, 72);
     color: gainsboro;
+  }
+
+  div.console div.controls::-webkit-scrollbar {
+    display: none;
+  }
+
+  div.console div.controls:hover::-webkit-scrollbar {
+    display: initial;
+    width: 4px;
+  }
+
+  div.console div.controls:hover::-webkit-scrollbar-thumb {
+    background: rgb(72, 72, 72);
   }
 }
 
